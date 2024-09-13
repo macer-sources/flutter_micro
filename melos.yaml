@@ -1,0 +1,14 @@
+name: your_project_name
+
+packages:
+  - modules/*    # 标记所有的子模块位置
+
+command:
+  bootstrap:
+    runPubGetInParallel: false
+
+
+scripts:
+  get:
+    exec: flutter pub get
+    ignoreErrors: true

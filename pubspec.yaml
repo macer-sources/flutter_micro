@@ -1,0 +1,41 @@
+name: micro_flutter
+description: "组件化解决方案"
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.2
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_native_splash: ^2.4.1
+  # 添加module 组件引用
+  core:
+    path: modules/core
+  network:
+    path: modules/network
+  login:
+    path: modules/login
+  home:
+    path: modules/home
+  profile:
+    path: modules/profile
+  router_path:
+    path: modules/router_path
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  melos: ^6.1.0
+
+flutter:
+  uses-material-design: true
