@@ -21,14 +21,16 @@ dependencies:
     path: modules/core
   network:
     path: modules/network
+  router_path:
+    path: modules/router_path
   login:
     path: modules/login
   home:
     path: modules/home
   profile:
     path: modules/profile
-  router_path:
-    path: modules/router_path
+  chat:
+    path: modules/chat
 
 
 dev_dependencies:

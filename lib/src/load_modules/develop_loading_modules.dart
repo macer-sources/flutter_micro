@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:home/home_module.dart';
 import 'package:login/login.dart';
 import 'package:micro_flutter/src/load_modules/loading_modules.dart';
+import 'package:micro_flutter/src/modules/main_module.dart';
 import 'package:network/network.dart';
 import 'package:profile/profile.dart';
 
@@ -18,10 +19,11 @@ class DevelopLoadingModules extends LoadingModules {
   @override
   void initEnv() {
     modules.addAll([
+      MainModule.instance,
       NetworkModule.newInstance(environment: CoreEnvironment(baseUrl: "")),
       LoginModule.instance,
       HomeModule.instance,
-      ProfileModule.instance
+      ProfileModule.instance,
       // TODO: 其他模块
     ]);
   }
@@ -39,9 +41,9 @@ class DevelopLoadingModules extends LoadingModules {
   @override
   List<GetPage> pages() {
     List<GetPage> combinedList = [];
-    modules.forEach((e){
+    for (var e in modules) {
       combinedList.addAll(e.pages());
-    });
+    }
     return combinedList;
   }
 }

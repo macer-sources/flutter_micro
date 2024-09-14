@@ -2,7 +2,7 @@
 
 
 import 'package:core/core.dart';
-import 'package:micro_flutter/src/environment.dart';
+import 'package:micro_flutter/src/config/environment.dart';
 
 class Configuration {
   static Environment? _environment;

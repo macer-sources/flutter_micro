@@ -1,4 +1,4 @@
-name: router_path
+name: chat
 description: "A new Flutter project."
 version: 0.0.1
 publish_to: none
@@ -11,9 +11,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  get: ^4.6.6
-  logging: ^1.2.0
-
+  core:
+    path: ../core
+  network:
+    path: ../network
+  router_path:
+    path: ../router_path
 dev_dependencies:
   flutter_test:
     sdk: flutter

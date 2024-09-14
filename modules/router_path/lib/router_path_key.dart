@@ -1,10 +1,17 @@
 
 
 enum RouterPathKey {
+  none,
   main,
+  // 登录相关
+  splashLogin,
+  presentLogin,
   login,
   register,
-  home,
+  registerSendForEmail,
+  registerFieldCode,
+  registerSetPassword,
+  // 个人中心相关
   profile,
 }
 

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:home/pages/home_page.dart';
 import 'package:login/pages/login_page.dart';
-import 'package:micro_flutter/src/configuration.dart';
+import 'package:micro_flutter/src/config/configuration.dart';
 import 'package:router_path/router_path.dart';
 
 class App extends StatefulWidget {
@@ -19,17 +19,6 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
-    // return MaterialApp(
-    //   title: "Flutter micro",
-    //   debugShowCheckedModeBanner: true,
-    //   theme: ThemeData(
-    //     colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-    //     useMaterial3: true,
-    //   ),
-    //   home: const LoginPage(),
-    // );
-
-
     return AnnotatedRegion(value: SystemUiOverlayStyle.dark,
         child: GetMaterialApp(
           title: "Flutter Micro",
@@ -38,7 +27,7 @@ class _AppState extends State<App> {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          initialRoute: RouterPathKey.home.path,
+          initialRoute: RouterPathKey.main.path,
           // home: const HomePage(),
           getPages: Configuration.pages(),
         )

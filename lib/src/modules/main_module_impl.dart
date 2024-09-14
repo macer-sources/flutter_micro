@@ -1,12 +1,11 @@
-
 import 'package:core/core.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:home/home_module.dart';
-import 'package:home/pages/home_page.dart';
+import 'package:micro_flutter/src/modules/main_module.dart';
+import 'package:micro_flutter/src/pages/main_page.dart';
 import 'package:router_path/router_path.dart';
 
-class HomeModuleImpl extends HomeModule {
-  HomeModuleImpl();
+class MainModuleImpl extends MainModule {
+  MainModuleImpl();
 
   @override
   Future<void> inject() async {
@@ -21,7 +20,10 @@ class HomeModuleImpl extends HomeModule {
   @override
   List<GetPage> pages() {
     return [
-
+      GetPage(
+          name: RouterPathKey.main.path,
+          page: () => const MainPage(),
+          transitionDuration: const Duration(seconds: 0)),
     ];
   }
 

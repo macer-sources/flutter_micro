@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:micro_flutter/app.dart';
-import 'package:micro_flutter/src/configuration.dart';
+import 'package:micro_flutter/src/config/configuration.dart';
 
 void startApp() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();

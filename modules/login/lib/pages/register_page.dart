@@ -2,6 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:router_path/router_manager.dart';
+import 'package:router_path/router_path.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -24,8 +26,8 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 }
 
-extension _RegisterPageStateAction on _RegisterPageState {
+extension _Action on _RegisterPageState {
   void _registerButtonAction() async {
-
+      RouterManager.push(RouterPathKey.registerSendForEmail);
   }
 }

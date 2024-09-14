@@ -1,12 +1,10 @@
-
+import 'package:chat/chat_module.dart';
 import 'package:core/core.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:home/home_module.dart';
-import 'package:home/pages/home_page.dart';
 import 'package:router_path/router_path.dart';
 
-class HomeModuleImpl extends HomeModule {
-  HomeModuleImpl();
+class ChatModuleImpl extends ChatModule {
+  ChatModuleImpl();
 
   @override
   Future<void> inject() async {

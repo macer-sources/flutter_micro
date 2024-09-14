@@ -10,3 +10,4 @@ export 'src/exceptions/no_connection_exception.dart';
 
 export 'package:dio/dio.dart';
 export 'package:json_annotation/json_annotation.dart';
+export 'src/service.dart';
