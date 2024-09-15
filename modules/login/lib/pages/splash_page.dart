@@ -1,4 +1,5 @@
 
+import 'package:assets/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:router_path/router_manager.dart';
@@ -13,19 +14,17 @@ class SplashPage extends StatefulWidget {
 
 class _SplashPageState extends State<SplashPage> {
 
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Register"),
-      ),
-      body: Center(
-          child: Row(children: [
-            ElevatedButton(onPressed: () => _loginAction(context), child: const Text("Login")),
-            ElevatedButton(onPressed: () => _regsiterAction(context), child: const Text("Register")),
-          ],)
-      ),
-    );
+        body: Stack(
+          alignment: AlignmentDirectional.center,
+          children: [
+            Positioned.fill(child: Assets.images.login.splashBackground.image(fit: BoxFit.cover))
+          ],
+        ));
   }
 }
 

@@ -17,6 +17,11 @@ dependencies:
     path: ../network
   router_path:
     path: ../router_path
+  assets:
+    path: ../assets
+
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -48,3 +48,7 @@ flutter_icons:
   ios: true               # 启用 iOS 图标生成
   image_path: "assets/imgs/app_icon.png"  # 指定你的应用图标路径
   # 运行命令： flutter pub run flutter_launcher_icons:main
+
+
+
+
