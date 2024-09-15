@@ -12,7 +12,7 @@ import 'package:micro_flutter/src/config/configuration.dart';
 void startApp() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   // TODO: 会导致无法显示内容，奇怪？
-  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   // 初始化(加载所有当前环境的models)
   Configuration.initEnv();
@@ -32,7 +32,7 @@ void startApp() async {
       statusBarBrightness: Brightness.dark));
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   // 启动 app
-
+  FlutterNativeSplash.remove();
   runApp(const App());
   debugPrint("[DEBUG]: 启动完成");
 }
