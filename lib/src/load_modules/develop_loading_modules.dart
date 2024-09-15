@@ -19,6 +19,7 @@ class DevelopLoadingModules extends LoadingModules {
   @override
   void initEnv() {
     modules.addAll([
+      CoreModule.instance,
       MainModule.instance,
       NetworkModule.newInstance(environment: CoreEnvironment(baseUrl: "")),
       LoginModule.instance,

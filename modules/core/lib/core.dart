@@ -9,3 +9,8 @@ export 'exceptions/unknown_exception.dart';
 
 export 'method.dart';
 export 'package:cupertino_icons/cupertino_icons.dart';
+
+
+export 'core_module.dart';
+
+
