@@ -32,7 +32,8 @@ void startApp() async {
       statusBarBrightness: Brightness.dark));
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   // 启动 app
-  FlutterNativeSplash.remove();
+
   runApp(const App());
   debugPrint("[DEBUG]: 启动完成");
+  FlutterNativeSplash.remove();
 }
