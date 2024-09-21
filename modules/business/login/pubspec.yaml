@@ -1,5 +1,5 @@
-name: chat
-description: "A new Flutter project."
+name: login
+description: "login"
 version: 0.0.1
 publish_to: none
 homepage:
@@ -12,9 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
   core:
-    path: ../core
+    path: ../../basic/core
   network:
-    path: ../network
+    path: ../../basic/network
   router_path:
     path: ../router_path
   assets:

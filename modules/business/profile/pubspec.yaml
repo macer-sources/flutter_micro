@@ -12,9 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
   core:
-    path: ../core
+    path: ../../basic/core
   network:
-    path: ../network
+    path: ../../basic/network
   router_path:
     path: ../router_path
   assets:

@@ -1,0 +1,10 @@
+# melos_managed_dependency_overrides: assets,core,network,router_path
+dependency_overrides:
+  assets:
+    path: ../assets
+  core:
+    path: ../../basic/core
+  network:
+    path: ../../basic/network
+  router_path:
+    path: ../router_path

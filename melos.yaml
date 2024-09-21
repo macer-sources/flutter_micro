@@ -1,4 +1,4 @@
-name: your_project_name
+name: micro_project
 
 packages:
   - modules/**/*    # 标记所有的子模块位置

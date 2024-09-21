@@ -16,22 +16,24 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   flutter_native_splash: ^2.4.1
+  flutter_launcher_icons: ^0.13.1
   # 添加module 组件引用
   core:
-    path: modules/core
+    path: modules/basic/core
   network:
-    path: modules/network
+    path: modules/basic/network
   router_path:
-    path: modules/router_path
+    path: modules/business/router_path
   login:
-    path: modules/login
+    path: modules/business/login
   home:
-    path: modules/home
+    path: modules/business/home
   profile:
-    path: modules/profile
+    path: modules/business/profile
   chat:
-    path: modules/chat
-  flutter_launcher_icons: ^0.13.1
+    path: modules/business/chat
+
+
 
 
 dev_dependencies:

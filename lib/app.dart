@@ -1,10 +1,7 @@
 
 import 'package:core/core.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:home/pages/home_page.dart';
-import 'package:login/pages/login_page.dart';
 import 'package:micro_flutter/src/config/configuration.dart';
 import 'package:router_path/router_path.dart';
 

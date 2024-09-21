@@ -36,7 +36,7 @@ packages:
   assets:
     dependency: transitive
     description:
-      path: "modules/assets"
+      path: "modules/business/assets"
       relative: true
     source: path
     version: "0.0.1"
@@ -75,7 +75,7 @@ packages:
   chat:
     dependency: "direct main"
     description:
-      path: "modules/chat"
+      path: "modules/business/chat"
       relative: true
     source: path
     version: "0.0.1"
@@ -130,7 +130,7 @@ packages:
   core:
     dependency: "direct main"
     description:
-      path: "modules/core"
+      path: "modules/basic/core"
       relative: true
     source: path
     version: "0.0.1"
@@ -264,7 +264,7 @@ packages:
   home:
     dependency: "direct main"
     description:
-      path: "modules/home"
+      path: "modules/business/home"
       relative: true
     source: path
     version: "0.0.1"
@@ -367,7 +367,7 @@ packages:
   login:
     dependency: "direct main"
     description:
-      path: "modules/login"
+      path: "modules/business/login"
       relative: true
     source: path
     version: "0.0.1"
@@ -414,7 +414,7 @@ packages:
   network:
     dependency: "direct main"
     description:
-      path: "modules/network"
+      path: "modules/basic/network"
       relative: true
     source: path
     version: "0.0.1"
@@ -461,7 +461,7 @@ packages:
   profile:
     dependency: "direct main"
     description:
-      path: "modules/profile"
+      path: "modules/business/profile"
       relative: true
     source: path
     version: "0.0.1"
@@ -508,7 +508,7 @@ packages:
   router_path:
     dependency: "direct main"
     description:
-      path: "modules/router_path"
+      path: "modules/business/router_path"
       relative: true
     source: path
     version: "0.0.1"
