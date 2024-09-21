@@ -1,7 +1,7 @@
 name: your_project_name
 
 packages:
-  - modules/*    # 标记所有的子模块位置
+  - modules/**/*    # 标记所有的子模块位置
 
 command:
   bootstrap:
