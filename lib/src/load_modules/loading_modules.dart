@@ -15,4 +15,6 @@ abstract class LoadingModules {
   Future<void> inject();
 
   List<GetPage> pages();
+
+    Future<void> initServices();
 }

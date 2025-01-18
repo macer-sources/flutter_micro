@@ -3,6 +3,7 @@
 enum RouterPathKey {
   none,
   main,
+  home,
   // 登录相关
   splashLogin,
   presentLogin,
@@ -12,7 +13,7 @@ enum RouterPathKey {
   registerFieldCode,
   registerSetPassword,
   // 个人中心相关
-  profile,
+  profile, loading,
 }
 
 extension Path on RouterPathKey {

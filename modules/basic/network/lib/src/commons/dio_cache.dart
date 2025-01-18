@@ -1,0 +1,79 @@
+import 'package:dio/dio.dart';
+import 'package:dio_cache_interceptor/dio_cache_interceptor.dart';
+import 'package:dio_cache_interceptor_hive_store/dio_cache_interceptor_hive_store.dart';
+import 'package:flutter/widgets.dart';
+import 'package:network/src/commons/temp_path.dart';
+
+class DioCache {
+  DioCache._();
+
+  static CacheOptions? cacheOptions;
+  static CacheStore? cacheStore;
+
+  /*
+   * 初始化缓存配置项
+  */
+  static initCacheStore() async {
+    String? path = await TempPath.getTemPath();
+    debugPrint("临时文件路径$path");
+    cacheStore = HiveCacheStore(
+      path,
+      hiveBoxName: "hzy_project_http_cache",
+    );
+    return cacheStore;
+  }
+
+  /*
+   * 初始化缓存拦截器
+  */
+  static DioCacheInterceptor interceptor() {
+    cacheOptions = CacheOptions(
+      store: cacheStore,
+      policy: CachePolicy.request,
+      allowPostMethod: true,
+    );
+    return DioCacheInterceptor(
+      options: cacheOptions!,
+    );
+  }
+
+  /*
+   * 获取缓存数据
+   * dio_cache 原始数据
+   * */
+  static getHttpCacheResponse({
+    required String path,
+    String? method,
+    dynamic data,
+    Map<String, dynamic>? queryParameters,
+  }) async {
+    final key = CacheOptions.defaultCacheKeyBuilder(
+      RequestOptions(
+        path: path,
+        method: method,
+        data: data,
+        queryParameters: queryParameters,
+      ),
+    );
+    return await cacheStore?.get(key);
+  }
+
+  /*
+   * 清楚http缓存
+  */
+  static clearHttpCache() async {
+    await cacheStore?.clean();
+  }
+
+  /*
+   * 清理单个网络请求缓存
+  */
+  static clearUrlHttpCache({
+    required String url,
+  }) async {
+    final key = CacheOptions.defaultCacheKeyBuilder(
+      RequestOptions(path: url),
+    );
+    await cacheStore?.delete(key);
+  }
+}

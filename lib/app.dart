@@ -24,6 +24,12 @@ class _AppState extends State<App> {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
+          locale: Get.deviceLocale,
+          fallbackLocale: const Locale("zh", "CN"),
+          supportedLocales: const [
+            Locale.fromSubtags(languageCode: 'en'),
+            Locale.fromSubtags(languageCode: 'cn'),
+          ],
           initialRoute: RouterPathKey.main.path,
           // home: const HomePage(),
           getPages: Configuration.pages(),

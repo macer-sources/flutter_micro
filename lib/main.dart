@@ -19,6 +19,8 @@ void startApp() async {
   // 执行所有的注入操作
   await Configuration.inject();
 
+  await Configuration.initServices();
+
   // 日志配置
   Logger.root.onRecord.listen((record) {
     if (kDebugMode) {

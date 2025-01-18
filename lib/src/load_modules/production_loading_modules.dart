@@ -7,6 +7,9 @@ import 'package:micro_flutter/src/load_modules/loading_modules.dart';
 import 'package:micro_flutter/src/modules/main_module.dart';
 import 'package:network/network.dart';
 import 'package:profile/profile.dart';
+import 'package:router_path/router_path.dart';
+
+import '../pages/main_page.dart';
 
 class ProductionLoadingModules extends LoadingModules {
   ProductionLoadingModules();
@@ -35,15 +38,21 @@ class ProductionLoadingModules extends LoadingModules {
   Future<void> inject() async {
     await Future.wait(modules.map((e) => e.inject()).toList());
   }
-
   @override
   List<GetPage> pages() {
     List<GetPage> combinedList = [];
-    for (var e in modules) {
+    combinedList.add(
+        GetPage(name: RouterPathKey.main.path, page: () => const MainPage()));
+    modules.forEach((e) {
       combinedList.addAll(e.pages());
-    }
+    });
     return combinedList;
   }
 
+  @override
+  Future<void> initServices() {
+    // TODO: implement initServices
+    return Future.value();
+  }
 
 }

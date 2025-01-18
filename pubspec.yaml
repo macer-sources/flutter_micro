@@ -32,6 +32,8 @@ dependencies:
     path: modules/business/profile
   chat:
     path: modules/business/chat
+  commons:
+    path: modules/business/commons
 
 
 

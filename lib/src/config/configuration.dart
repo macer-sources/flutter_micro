@@ -33,7 +33,10 @@ class Configuration {
   static List<GetPage> pages() {
     return environment.loadingModules.pages();
   }
-
+  
+  static Future<void> initServices() async {
+    environment.loadingModules.initServices();
+  }
 
 
 }

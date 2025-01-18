@@ -1,6 +1,7 @@
 
 
 
+import 'package:commons/commons.dart';
 import 'package:core/core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:home/home_module.dart';
@@ -9,7 +10,10 @@ import 'package:micro_flutter/src/load_modules/loading_modules.dart';
 import 'package:micro_flutter/src/modules/main_module.dart';
 import 'package:network/network.dart';
 import 'package:profile/profile.dart';
+import 'package:router_path/router_path.dart';
 
+import '../pages/loading_page.dart';
+import '../pages/main_page.dart';
 class DevelopLoadingModules extends LoadingModules {
   DevelopLoadingModules();
 
@@ -42,9 +46,18 @@ class DevelopLoadingModules extends LoadingModules {
   @override
   List<GetPage> pages() {
     List<GetPage> combinedList = [];
-    for (var e in modules) {
+    combinedList.add(GetPage(
+        name: RouterPathKey.loading.path, page: () => const LoadingPage()));
+    combinedList.add(
+        GetPage(name: RouterPathKey.main.path, page: () => const MainPage()));
+    modules.forEach((e) {
       combinedList.addAll(e.pages());
-    }
+    });
     return combinedList;
+  }
+
+  @override
+  Future<void> initServices() async {
+    await Get.putAsync(() async => AuthStatusService());
   }
 }

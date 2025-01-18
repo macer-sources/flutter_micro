@@ -21,7 +21,7 @@ class HomeModuleImpl extends HomeModule {
   @override
   List<GetPage> pages() {
     return [
-
+        GetPage(name: RouterPathKey.home.path, page: () => const HomePage()),
     ];
   }
 
